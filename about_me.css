@@ -5,25 +5,28 @@
 
 }
 body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Roboto', sans-serif;
     color: #2d2829;
-    size: 15;
+    size: 30;
     
 }
 .bg-ex-color{
     background: hsla(0, 0%, 0%, 0.49); /* Цвет блока */
-    width: 60%; /* Ширина блока */
-    height: 100px; /* Высота блока */
+    width: 100%; /* Ширина блока */
+    height: 125px; /* Высота блока */
     justify-content: center;
     align-items: center;
     display: flex;
+         
   }
 .box {
     background: url(bgrounds-gradient1.png);
-    height: 100vh;
+    height: 100%;
+    width: 100%;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    border-radius: 10px 10px -0px 0px; 
 }
 .backgroung_about_me {
     color: #2d2829;
@@ -31,20 +34,121 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 90%; /* Для ширины на весь экран нужно прописать 100% */
-    height: 300px;
+    width: 85%; /* Для ширины на весь экран нужно прописать 100% */
+    height: 450px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 7%;
+    border-radius: 10px;
+   
 }
 .site-navigation-item a {
     font-size: 13px;
     line-height: 16px;
-    color: #282324;
+    color: #2d2829;
     text-transform: uppercase;
     text-decoration: none;
+    
   }
-  .site-navigation-item a.active {
+  ul {
+    list-style: none; /*убираем маркеры списка*/
+    margin: 0; /*убираем верхнее и нижнее поле, равное 1em*/
+    padding-left: 0; /*убираем левый отступ, равный 40px*/
+  }
+  /* .site-navigation-item a.active {
     color: #060505;
-  }
+  } */
   .promo h1 {
     font-size: 50px;
     line-height: 40px;
   }
+  .main-header-nav {
+    width: 100%;
+    display: table;
+  }
+  .main-header-nav ul {
+    display: table-row;
+  }
+  .main-header-nav li {
+    display: table-cell;
+    background: hsla(0, 0%, 0%, 0.029);
+  }
+  .main-header-nav ul li:hover, .menu a:hover {
+    background: #2e272755;
+  }
+  .main-header-nav li a {
+    display: block;
+    padding: 8px 15px;
+    color: #2d2829;
+    text-align: center;
+  }
+  .site-navigation {
+    list-style: none; 
+    top: 20%; 
+    border-radius: 10px 0 0  10px;
+  
+  }
+  .navigation {
+    top: 18%;
+    position:absolute; 
+    left: 8%;
+    
+    
+  }
+
+.main-footer {
+  background: hsla(0, 0%, 0%, 0.49); /* Цвет блока */
+  width: 100%; /* Ширина блока */
+  height: 140px; /* Высота блока */
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  bottom:0;
+}
+ /* .backgroung_art {
+  color: #2d2829;
+  background: hsla(0, 0%, 0%, 0.344); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%; 
+  height: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  bottom: 10%;
+  border-radius: 10px;
+  position: absolute;
+}  */
+.main-footer {
+	width: 100%;
+	display: table;
+}
+.main-footer ul {
+	display: table-row;
+}
+.main-footer li {
+	display: table-cell;
+  background: hsla(0, 0%, 0%, 0.029);
+}
+.main-footer ul li:hover, .menu a:hover {
+	background: #2e27273c;
+}
+.main-footer li a {
+	display: block;
+	padding: 8px 15px;
+	color: #fff;
+	text-align: center;
+
+}
+
+.backgroung_about_me img {
+ position: fixed;
+  left: 10%;
+  border-radius: 70%;
+}
+.main_me {
+width:50%;
+position: fixed;
+left: 40%;
+font-size: 100%;
+}
