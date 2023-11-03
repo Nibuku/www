@@ -4,45 +4,64 @@
     border: 0;
 
 }
-body {
-    font-family: 'Roboto', sans-serif;
-    color: #2d2829;
-    size: 30;
-    
-}
-.bg-ex-color{
-    background: hsla(0, 0%, 0%, 0.49); /* Цвет блока */
-    width: 100%; /* Ширина блока */
-    height: 125px; /* Высота блока */
-    justify-content: center;
-    align-items: center;
-    display: flex;
-         
-  }
 .box {
-    background: url(bgrounds-gradient1.png);
-    height: 100%;
-    width: 100%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    border-radius: 10px 10px -0px 0px; 
+  background: url(bgrounds-gradient1.png);
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px 10px -0px 0px; 
 }
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #2d2829;
+  size: 30%;
+  
+}
+.grid{
+  display: grid;
+  gap:20px;
+  justify-content: center;
+	grid-template-rows: repeat(3, 400px);
+	grid-template-areas:
+		'header header header'
+		'grid-container grid-container grid-container'
+    'backgroung_art backgroung_art backgroung_art'
+		'main-footer main-footer main-footer';
+}
+
+header {
+  grid-area:header;
+	text-align: center;
+	background: hsla(0, 0%, 0%, 0.49); 
+	font-family:'Didact Gothic', sans-serif;
+  height: 110px;
+  justify-content: center;
+  grid-auto-rows: span 3;
+}
+
+  
+
 .backgroung_about_me {
-    color: #2d2829;
-    background: hsla(0, 0%, 0%, 0.344); /* Прозрачность */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 85%; /* Для ширины на весь экран нужно прописать 100% */
-    height: 410px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 7%;
-    border-radius: 10px;
-    margin-bottom:7%;
-   
+  grid-area:grid-container;
+  color: #2d2829;
+  background: hsla(0, 0%, 0%, 0.344); 
+  justify-content: center;
+  align-items: center;
+  width: 85%; 
+  height: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+  position: relative; 
+  margin-bottom: 10%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: -15%;
+  font-size: 100%;
 }
+ 
 
 .site-navigation-item a {
     font-size: 13px;
@@ -58,10 +77,12 @@ body {
     padding-left: 0; /*убираем левый отступ, равный 40px*/
   }
  
-  .promo h1 {
+   h1 {
     font-size: 50px;
     line-height: 40px;
     text-align: center;
+    margin: 0;
+    width: 100%;
   }
   .main-header-nav {
     width: 100%;
@@ -84,24 +105,24 @@ body {
     text-align: center;
   }
   .site-navigation {
+    display:flex;
+	  width:100%;
     list-style: none; 
     top: 20%; 
     border-radius: 10px 0 0  10px;
   
   }
   .navigation {
-    top: 18%;
+    top: 15%;
     position:absolute; 
     left: 8%;
-    
-    
   }
  
 .main_me h1{
   position: absolute;
   bottom: 110%;
-  left: 23%;
-  font-size: 30px ;
+  left: 15%;
+  font-size: 300%;
 }
 
 
@@ -110,15 +131,26 @@ body {
   position: absolute;
   left: 40%;
   font-size: 100%;
-  top: 40%;
+  top: 20%;
   }
 
-.text {
+.text p {
+  grid-area: grid-container;
+  object-fit: cover;
   position: relative;
-  top: 22%;
-  font-size: 20px;
+  top: 10%;
+  left:15%;
+  
   }
+b {
+  grid-area: grid-container;
+  object-fit: cover;
+  position: relative;
+  top: 10%;
+  left:15%;
 
+
+}
 .main-footer {
   background: hsla(0, 0%, 0%, 0.49); /* Цвет блока */
   width: 100%; /* Ширина блока */
@@ -130,9 +162,9 @@ body {
   position: relative;
 }
  .backgroung_art {
+  grid-area:backgroung_art;
   color: #2d2829;
   background: hsla(0, 0%, 0%, 0.344); 
-  display: table; 
   justify-content: center;
   align-items: center;
   width: 85%; 
@@ -143,15 +175,20 @@ body {
   position: relative;
   float: left;
   left:7.5%;
-  margin-bottom: 7%;
+  margin-bottom: 30%;
+  display: flex; 
+  flex-wrap: wrap;
+  font-size: 90%;
+  
 }  
 
 .backgroung_art ul {
-	display: table-row;
+	display: flex;
   position: relative;
+  bottom: 7%;
 }
 .backgroung_art  li {
-	display: table-cell;
+	display: grid;
   background: hsla(0, 0%, 0%, 0.029);
   text-align: center;
 }
@@ -159,7 +196,7 @@ body {
 	background: #2e27273c;
 }
 .backgroung_art  li a {
-	display: block;
+	display: grid;
 	padding: 8px 15px;
 	color: #fff;
 	text-align: center;
@@ -190,11 +227,14 @@ body {
 
 }
 
-.backgroung_about_me img {
-  position: absolute;
-  left: 13%;
-  top: 35%;
-  border-radius: 70%;
+.backgroung_about_me> img {
+  grid-area: grid-container;
+  object-fit: cover;
+  width: 35%;
+  border-radius: 50%;
+  position: relative;
+  top: 4%;
+  right: 25%;
 }
 
 
@@ -212,3 +252,21 @@ h2 {
   text-align: center;
 }
 
+.article-list>img {
+  grid-area: grid-container;
+  object-fit: cover;
+  width: 100%;
+  border-radius: 5%;
+  position: relative;
+  top: 4%;
+  right: 65%;
+  margin-bottom: 20%;
+
+}
+
+.article-list >h3 {
+position: relative;
+left:30%;
+bottom: 10%;
+
+}
