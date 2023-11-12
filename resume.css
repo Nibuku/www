@@ -20,7 +20,6 @@ body {
     padding: 0;
   }
   
-
   header {
     background-color: #000;
     padding: 20px;
@@ -58,31 +57,23 @@ body {
     font-weight: bold;
   }
 
+
 .grid-container {
     display: grid;
-    grid-template-columns: 1.5fr 0.5fr;
+    grid-template-columns: 1fr;
     grid-gap: 20px;
     padding: 20px;
   }
-  
+
   .hero {
-    background-color: #49c5b6;
-    /* border-radius: 5%; */
+    background-color: #fdfdfd;
     padding: 20px;
     position: relative;
   }
-  
-  .backgroung_about_me {
-    padding: 20px;
-   
+
+  .main_me h1 {
+    text-align: center;
   }
-  
-  .backgroung_about_me img {
-    max-width: 100%;
-   border-radius: 10%;
-    justify-self: center;
-  }
-  
   .main_me {
     position: relative;
     top: 50%;
@@ -90,10 +81,9 @@ body {
   }
   
   
-  .article {
-    background-color:#DF6C4F;
+  .contacts {
+    background-color:#ffffff;
     padding: 20px;
-    /* border-radius: 7%; */
   }
   
   .backgroung_art {
@@ -103,35 +93,12 @@ body {
   .main_me.text {
     font-size: 1em;
 }
-  .art {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
   
-  .article-list {
+.contacts-list {
     margin-bottom: 20px;
     padding: 10px;
-    text-align: center;
-    justify-self: center;
+
 }
-  .backgroung_art h2 {
-    text-align: center;
-    justify-self: center; 
-  }
-  .article-list h3 {
-    margin-bottom: 10px;
-  }
-  
-  .article-list a {
-    margin-bottom: 10px;
-    color: #000;
-  }
-  
-  .article-list img {
-    max-width: 100%;
-    height: auto;
-  }
 
   main {
     display: grid;
